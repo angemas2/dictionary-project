@@ -4,3 +4,14 @@
     font-size: 60px;
     font-weight: 800;
 }
+
+.Search-bar{
+    color: var(--main-color);
+}
+
+:root{
+    --main-color:#1B105C;
+    --secondary-color-blue:#32B9C7;
+    --secondary-color-pink:#A50F8E;
+    --secondary-color-purple:#2915C7;
+}
