@@ -3,15 +3,39 @@
     text-align: center;
     font-size: 60px;
     font-weight: 800;
+    margin: 80px 0px;
 }
 
 .Search-bar{
     color: var(--main-color);
+    background: rgb(227, 222, 235);
+    border: none;
+    padding: 15px;
+    width: 80%;
+    border-radius: 15px;
 }
+
+.Search-bar::placeholder{
+    color: var(--main-color);
+    padding-left: 20px;
+}
+
+.Search-bar:focus{
+ outline-color: var(--main-color);
+}
+
 
 :root{
     --main-color:#1B105C;
     --secondary-color-blue:#32B9C7;
     --secondary-color-pink:#A50F8E;
     --secondary-color-purple:#2915C7;
+}
+
+.Search-form{
+    background: white;
+    border-radius: 15px;
+    max-width: 950px;   
+    margin: 50px auto;
+    padding: 60px;
 }
