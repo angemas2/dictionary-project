@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "./Dictionary.css";
-import axios, { AxiosError } from "axios";
+import axios from "axios";
 import Results from "./Results";
 import Photos from "./Photos";
 
@@ -14,7 +14,7 @@ export default function Dictionary(props) {
 
   function getDefinition(response) {
     setResults(response.data[0]);
-  
+
   }
 
   function getPhotos(response){
