@@ -10,7 +10,7 @@ export default function Footer(){
           rel="noopener noreferrer"
           href="https://github.com/angemas2/dictionary-project"
         >
-          <i class="fa-brands fa-github"></i>
+          <i className="fa-brands fa-github"></i>
         </a>
       </div>
     );

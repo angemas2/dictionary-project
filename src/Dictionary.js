@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "./Dictionary.css";
-import axios from "axios";
+import axios, { AxiosError } from "axios";
 import Results from "./Results";
 import Photos from "./Photos";
 
@@ -9,13 +9,15 @@ export default function Dictionary(props) {
   let [results, setResults] = useState(null);
   let [loaded, setLoaded] = useState(false);
   let [photos,setPhotos]=useState(null);
+ 
+
 
   function getDefinition(response) {
     setResults(response.data[0]);
+  
   }
 
   function getPhotos(response){
-console.log(response.data.photos);
 setPhotos(response.data.photos)
   }
 
@@ -45,9 +47,10 @@ setPhotos(response.data.photos)
     setKeyword(event.target.value);
   }
 
+ 
   if (loaded) {
     return (
-      <div className="Dictionary" >
+      <div className="Dictionary">
         <h1>Dictionary</h1>
         <section>
           <h2>What word do you want to look up?</h2>
@@ -57,19 +60,20 @@ setPhotos(response.data.photos)
           >
             <input
               type="text"
-        
               className="Search-bar text-capitalize"
               onChange={Handlekeyword}
               defaultValue={keyword}
             />
           </form>{" "}
-          <p>i.e. paris, wine, yoga, coding</p>
+          <p>i.e. wine, yoga, coding</p>
         </section>
-        <Results results={results} />
-        <Photos photos={photos}/>
+        
+          <Results results={results} />
+          <Photos photos={photos} />
+      
       </div>
     );
-  } else {
+  }  else  {
     load();
     return "loading...";
   }

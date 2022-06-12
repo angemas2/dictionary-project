@@ -3,7 +3,7 @@ import "./Synonyms.css"
 
 export default function Synonym(props) {
   if (props.synonyms.length) {
-    console.log(props.synonyms);
+  
     return (
     <div className="synonymes">
       
