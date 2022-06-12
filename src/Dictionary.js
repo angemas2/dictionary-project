@@ -51,7 +51,7 @@ setPhotos(response.data.photos)
   if (loaded) {
     return (
       <div className="Dictionary">
-        <h1 className="animate-charcter">Dictionary</h1>
+        <h1>Dictionary</h1>
         <section>
           <h2>What word do you want to look up?</h2>
           <form
