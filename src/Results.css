@@ -1,3 +1,9 @@
 body{
-    color: white;
+    color: var(--main-color);
+}
+
+.Results h3{
+font-weight:900;
+font-size: 30px;
+line-height: 1.1;
 }

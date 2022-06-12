@@ -1,0 +1,16 @@
+.Meaning h4 {
+  color: var(--secondary-color-blue);
+  font-weight: 700;
+  font-size: 30px;
+  margin-bottom: 15px;
+}
+
+.Meaning .example {
+  font-style: italic;
+  opacity: 0.7;
+}
+
+.Meaning .def{
+   padding-bottom: 20px;
+
+}

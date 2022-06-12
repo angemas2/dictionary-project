@@ -1,41 +1,51 @@
-.Dictionary h1{
-    color: white;
-    text-align: center;
-    font-size: 60px;
-    font-weight: 800;
-    margin: 80px 0px;
+.Dictionary h1 {
+  color: white;
+  text-align: center;
+  font-size: 60px;
+  font-weight: 800;
+  margin: 60px 0;
 }
 
-.Search-bar{
-    color: var(--main-color);
-    background: rgb(227, 222, 235);
-    border: none;
-    padding: 15px;
-    width: 80%;
-    border-radius: 15px;
+.Dictionary h2{
+   font-size: 30px;
+   font-weight: 700;
+   margin-bottom: 20px;
+   line-height: 1.1;
 }
 
-.Search-bar::placeholder{
-    color: var(--main-color);
-    padding-left: 20px;
+.Dictionary p{
+    font-size: 16px;
+    font-weight: 200;
+    opacity: 0.8;
+    margin-top: 15px;
+    margin-bottom: 0px;
+     line-height: 1.1;
 }
 
-.Search-bar:focus{
- outline-color: var(--main-color);
+.Search-bar {
+  color: var(--main-color);
+  background: rgb(239, 236, 243);
+  border: none;
+  padding: 15px;
+  width: 100%;
+  border-radius: 15px;
 }
 
-
-:root{
-    --main-color:#1B105C;
-    --secondary-color-blue:#32B9C7;
-    --secondary-color-pink:#A50F8E;
-    --secondary-color-purple:#2915C7;
+.Search-bar:focus {
+  outline-color: var(--main-color);
 }
 
-.Search-form{
-    background: white;
-    border-radius: 15px;
-    max-width: 950px;   
-    margin: 50px auto;
-    padding: 60px;
+:root {
+  --main-color: #1b105c;
+  --secondary-color-blue: #32b9c7;
+  --secondary-color-pink: #a50f8e;
+  --secondary-color-purple: #2915c7;
+}
+
+section {
+  background: white;
+  border-radius: 15px;
+  max-width: 950px;
+  margin: 25px auto;
+  padding:35px;
 }
