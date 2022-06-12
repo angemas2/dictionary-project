@@ -85,5 +85,13 @@ section {
     }
     .Dictionary h2{
         font-size: 18px;
+        margin-bottom: 10px;
+    }
+    section{
+        padding: 20px;
+        margin: 15px 20px;
+    }
+    .Search-bar{
+        padding: 10px;
     }
 }
