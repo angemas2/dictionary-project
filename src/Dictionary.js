@@ -51,7 +51,7 @@ setPhotos(response.data.photos)
   if (loaded) {
     return (
       <div className="Dictionary">
-        <h1>Dictionary</h1>
+        <h1 className="animate-charcter">Dictionary</h1>
         <section>
           <h2>What word do you want to look up?</h2>
           <form
@@ -67,10 +67,9 @@ setPhotos(response.data.photos)
           </form>{" "}
           <p>i.e. wine, yoga, coding</p>
         </section>
-        
-          <Results results={results} />
-          <Photos photos={photos} />
-      
+
+        <Results results={results} />
+        <Photos photos={photos} />
       </div>
     );
   }  else  {
