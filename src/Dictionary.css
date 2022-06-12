@@ -78,3 +78,12 @@ section {
  
  
 }
+
+@media (max-width:700px){
+    .Dictionary h1{
+       line-height: 1;
+    }
+    .Dictionary h2{
+        font-size: 18px;
+    }
+}
