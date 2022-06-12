@@ -51,3 +51,36 @@ section {
   box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
 }
 
+section .search{
+    margin-top: 60px;
+}
+.title{
+    
+  color: white;
+  font-size: 60px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  margin-bottom: 20px;
+  position: relative;
+  animation-name: text;
+  animation-duration: 4s;
+  animation-iteration-count: 1;
+
+}
+
+@keyframes text {
+  0% {
+    color: white;
+  
+  }
+  30% {
+    letter-spacing: 15px;
+    
+  }
+  85% {
+    letter-spacing: 8px;
+  }
+
+ 
+ 
+}
