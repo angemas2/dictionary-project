@@ -3,24 +3,24 @@ import "./Dictionary.css";
 import axios from "axios";
 import Results from "./Results";
 import Photos from "./Photos";
+import Error from "./Error";
 
 export default function Dictionary(props) {
   let [keyword, setKeyword] = useState(props.defaultword);
   let [results, setResults] = useState(null);
   let [loaded, setLoaded] = useState(false);
-  let [photos,setPhotos]=useState(null);
- 
-
+  let [photos, setPhotos] = useState(null);
+  let [status, setStatus] = useState("");
 
   function getDefinition(response) {
     setResults(response.data[0]);
-
+    console.log(response.status);
+    setStatus(response.status);
   }
 
-  function getPhotos(response){
-setPhotos(response.data.photos)
+  function getPhotos(response) {
+    setPhotos(response.data.photos);
   }
-
 
   function load() {
     setLoaded(true);
@@ -30,8 +30,10 @@ setPhotos(response.data.photos)
   function search() {
     let apiURL = `https://api.dictionaryapi.dev/api/v2/entries/en/${keyword}`;
     axios.get(apiURL).then(getDefinition);
+    fetch(apiURL).then((response) => setStatus(response.status));
 
-    let pexelApiKey="563492ad6f91700001000001e5a4f15376204d9fb826c066e13fd40a";
+    let pexelApiKey =
+      "563492ad6f91700001000001e5a4f15376204d9fb826c066e13fd40a";
     let header = { Authorization: `Bearer ${pexelApiKey}` };
     let pexelURL = `https://api.pexels.com/v1/search?query=${keyword}&per_page=9`;
     axios.get(pexelURL, { headers: header }).then(getPhotos);
@@ -47,7 +49,6 @@ setPhotos(response.data.photos)
     setKeyword(event.target.value);
   }
 
- 
   if (loaded) {
     return (
       <div className="Dictionary">
@@ -66,14 +67,15 @@ setPhotos(response.data.photos)
             />
           </form>{" "}
           <p>i.e. wine, yoga, coding</p>
+          <Error status={status} />
         </section>
-
-        <Results results={results} />
-        <Photos photos={photos} />
+        <Results results={results} status={status} />
+        <Photos photos={photos} status={status} />
       </div>
     );
-  }  else  {
+  } else {
     load();
+
     return "loading...";
   }
 }

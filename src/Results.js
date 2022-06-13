@@ -4,7 +4,7 @@ import Meaning from "./Meaning";
 import Phonetic from "./Phonetic";
 
 export default function Results(props) {
-  if (props.results) {
+  if (props.results && props.status===200) {
     return (
       <div className="Results">
         <section>

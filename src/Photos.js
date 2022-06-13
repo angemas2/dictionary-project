@@ -2,7 +2,7 @@ import React from "react";
 import "./Photos.css";
 
 export default function Photos(props) {
-  if (props.photos) {
+  if (props.photos && props.status===200) {
     return (
       <section className="Photos">
         <div className="row">
