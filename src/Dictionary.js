@@ -14,7 +14,6 @@ export default function Dictionary(props) {
 
   function getDefinition(response) {
     setResults(response.data[0]);
-    console.log(response.status);
     setStatus(response.status);
   }
 
